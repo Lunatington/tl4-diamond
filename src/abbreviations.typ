@@ -33,4 +33,9 @@
     short: "VC",
     long: "Van-Carrier",
   ),
+  (
+    key: "ctt",
+    short: "CTT",
+    long: "Container Terminal Tollerort",
+  ),
 )
