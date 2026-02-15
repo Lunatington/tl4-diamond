@@ -5,7 +5,7 @@
 	language: "de",
   "2",
 	"13445",
-	"Ein wundervoller und deskriptiver, aber nicht zu langer Titel, aber immerhin füllt er zwei Zeilen",
+	"Analyse und Lösung einer ConcurrentModificationException im Terminal Geometrieeditor im Rahmen eines Debugging-Prozesses, in Java",
 	"Technische Informatik, T23a",
 	appendix_content: include "chapters/99_appendix.typ",
 )
