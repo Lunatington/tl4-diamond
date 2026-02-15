@@ -1,10 +1,20 @@
 #import "../components/code.typ": codeblock
 
-== Code snippet
-  #figure(
-    codeblock("../res/rust_example.rs", "Java"),
-    caption: [Dummy Rust code to show the code blocks]
-  ) <N4-Node-Move-Usecase>
+
+== Code
+#strong[UseCaseGeometryModifiedN4Node.java]
+<usecase-geometry-modified-n4-node>
+
+#raw(
+  read("../res/UseCaseGeometryModifiedN4Node.java"),
+  lang: "java",
+  block: true,
+)
+
+#strong[UseCaseGeometryModifiedN4Node.java]
+<usecase-geometry-modified-n4-node2>
+
+== Code 
 
   == Text
   #lorem(50)

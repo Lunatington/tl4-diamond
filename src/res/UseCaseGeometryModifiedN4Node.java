@@ -1,29 +1,3 @@
-package de.hhla.tools.geoeditor.terminal.usecase.geometry;
-
-
-import javax.swing.SwingUtilities;
-import com.vividsolutions.jump.workbench.model.Layer;
-import com.vividsolutions.jump.workbench.model.LayerEventType;
-
-import java.util.Iterator;
-import com.vividsolutions.jts.geom.Coordinate;
-import com.vividsolutions.jts.geom.GeometryFactory;
-import com.vividsolutions.jump.feature.Feature;
-import com.vividsolutions.jump.workbench.model.FeatureEvent;
-import com.vividsolutions.jump.workbench.model.FeatureEventType;
-import com.vividsolutions.jump.workbench.model.LayerManager;
-import com.vividsolutions.jump.workbench.ui.WorkbenchFrame;
-import de.hhla.tools.geo.geometry.PrecisionReducer;
-import de.hhla.tools.geo.util.geo.GeometricalFunctions;
-import de.hhla.tools.geo.util.layer.LayerEdgesN4;
-import de.hhla.tools.geo.util.layer.LayerNodesN4;
-import de.hhla.tools.geo.util.layer.TerminalLayer;
-import de.hhla.tools.geo.util.singleton.SingletonFactory;
-import de.hhla.tools.geo.util.singleton.SingletonName;
-import de.hhla.tools.geo.util.usecase.AbstractUseCase;
-import de.hhla.tools.geo.util.usecase.UseCase;
-import de.hhla.tools.geo.util.usecase.UseCaseFactory;
-import de.hhla.tools.geo.util.usecase.UseCaseManager;
 
 /** UseCase zum Modifizieren von N4-Wegenetz-Punkten */
 public class UseCaseGeometryModifiedN4Node extends AbstractUseCase {
