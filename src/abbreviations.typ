@@ -18,9 +18,14 @@
     short: "JUMP",
     long: "Java Unified Mapping Program",
   ),
-    (
+  (
     key: "tos",
     short: "TOS",
     long: "Terminal Operating System",
+  ),
+  (
+    key: "jdk",
+    short: "JDK",
+    long: "Java Development Kit",
   ),
 )
