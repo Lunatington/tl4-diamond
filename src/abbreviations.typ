@@ -4,18 +4,23 @@
 
 #let abbreviation_list = (
   (
-    key: "cpu",
-    short: "CPU",
-    long: "Central Processing Unit",
+    key: "tge",
+    short: "GeoEditor",
+    long: "Terminal-Geometrie-Editor",
   ),
   (
-    key: "oop",
-    short: "OOP",
-    long: "Object Oriented Programming",
+    key: "hhla",
+    short: "HHLA",
+    long: "Hamburger Hafen und Logistik AG",
   ),
   (
-    key: "cfg",
-    short: "CFG",
-    long: "Control Flow Graph",
+    key: "jump",
+    short: "JUMP",
+    long: "Java Unified Mapping Program",
+  ),
+    (
+    key: "tos",
+    short: "TOS",
+    long: "Terminal Operating System",
   ),
 )
