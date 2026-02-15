@@ -2,9 +2,9 @@
 
 == Code snippet
   #figure(
-    codeblock("../res/rust_example.rs", "rust"),
+    codeblock("../res/rust_example.rs", "Java"),
     caption: [Dummy Rust code to show the code blocks]
-  ) <code-snippet>
+  ) <N4-Node-Move-Usecase>
 
   == Text
   #lorem(50)
