@@ -28,4 +28,9 @@
     short: "JDK",
     long: "Java Development Kit",
   ),
+  (
+    key: "vc",
+    short: "VC",
+    long: "Van-Carrier",
+  ),
 )
