@@ -1,18 +1,24 @@
 #import "../components/code.typ": codeblock
 
 
-== Code
-#strong[UseCaseGeometryModifiedN4Node.java]
-<usecase-geometry-modified-n4-node>
+== N4NodeMoveUseCase
+  #figure(
+    codeblock("../res/UseCaseGeometryModifiedN4Nodebefore.java", "Java"),
+    caption: [Ausgeführt wenn eine Node bewegt wird]
+  ) <N4-Node-Move-Usecase-with-all-changes>
 
-#raw(
-  read("../res/UseCaseGeometryModifiedN4Node.java"),
-  lang: "java",
-  block: true,
-)
+    #figure(
+    codeblock("../res/UseCaseGeometryModifiedN4Node2before.java", "Java"),
+  )
+== N4NodeMoveseCase mit allen veränderungen
+  #figure(
+    codeblock("../res/UseCaseGeometryModifiedN4Node.java", "Java"),
+    caption: [Ausgeführt wenn eine Node bewegt wird mit allen veränderungen]
+  ) <N4-Node-Move-Usecase-with-all-changes>
 
-#strong[UseCaseGeometryModifiedN4Node.java]
-<usecase-geometry-modified-n4-node2>
+    #figure(
+    codeblock("../res/UseCaseGeometryModifiedN4Node2.java", "Java"),
+  )
 
 == Code 
 
