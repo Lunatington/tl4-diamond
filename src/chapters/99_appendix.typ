@@ -2,18 +2,25 @@
 
 == GeoEditor Wiki-Pages
   #figure(
-  [@tge HHLA-Wiki-Page],
+  [],
   kind: "Anhang",
   supplement: "Anhang",
   caption: [@tge HHLA-Wiki-Page],
 ) <wiki>
 
   #figure(
-  [TerminalGeometrie HHLA-Wiki-Page],
+  [],
   kind: "Anhang",
   supplement: "Anhang",
   caption: [TerminalGeometrie HHLA-Wiki-Page],
 ) <wiki-TerminalGeometrie>
+
+  #figure(
+  [],
+  kind: "Anhang",
+  supplement: "Anhang",
+  caption: [GeoEditor N4-XPS HHLA-Wiki-Page],
+) <wiki-Geo-Xps>
 
 == N4NodeMoveUseCase
   
