@@ -22,6 +22,13 @@
   caption: [GeoEditor N4-XPS HHLA-Wiki-Page],
 ) <wiki-Geo-Xps>
 
+  #figure(
+  [],
+  kind: "Anhang",
+  supplement: "Anhang",
+  caption: [N4-XPS HHLA-Wiki-Page],
+) <wiki-Xps>
+
 == N4NodeMoveUseCase
   
   #codeblock("../res/UseCaseGeometryModifiedN4Nodebefore.java", "Java")
