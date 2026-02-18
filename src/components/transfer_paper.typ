@@ -76,7 +76,7 @@
   list_of(heading_texts.tables, table)
 
   // List of Listings
-  list_of(heading_texts.listings, raw)
+  //list_of(heading_texts.listings, raw)
 
   // List of Acronyms
   register-glossary(abbreviation_list)

@@ -36,3 +36,35 @@ public class UseCaseGeometryModifiedN4Node extends AbstractUseCase {
         Coordinate[] edgeCoordinates = edge.getGeometry().getCoordinates();
         nodeIngressID = (String) edge.getAttribute(LayerEdgesN4.ATTRIBUTE_INGRESS_VERTEX);
         nodeEgressID = (String) edge.getAttribute(LayerEdgesN4.ATTRIBUTE_EGRESS_VERTEX);
+
+        if (nodeEgressID.equals(currentID)) {
+          edgeCoordinates[1] = currentFeature.getGeometry().getCoordinate();
+          edgeChanged = true;
+          layerChanged = true;
+        }
+
+        if (edgeChanged) {
+          edge.setGeometry(factory.createLineString(edgeCoordinates));
+          this.addLogInfo("Edge von " + nodeIngressID + " nach " + nodeEgressID + ":  Geometrie geändert!");
+        }
+      }
+
+      if (layerChanged) {
+        layerManager.getLayer(TerminalLayer.EDGES_N4.getName()).setFeatureCollectionModified(true);
+
+        //Zwingt den Refresh nach verschiebung 
+        SwingUtilities.invokeLater(() -> {
+            getWorkbenchFrame()
+                .getContext()
+                .getLayerViewPanel()
+                .repaint();});
+      }
+     
+      // Usecase wieder hinzufuegen [02.02.2026 - Ersetzt durch UseCaseManager - ]
+      UseCaseManager.addUseCaseFeatureEventTypeGeometryModified(TerminalLayer.EDGES_N4, useCase);
+    }
+
+    flushLogInfo();
+  }
+}
+
