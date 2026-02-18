@@ -15,7 +15,7 @@ umfasst, darunter den Umschlag von Massengütern, Fruchtlogistik sowie container
 = Programmvorstellung
 #needsSpelling
 #todo("Michael Fragen wie der GeoEditor entstanden ist")
-Der @tge ist ein von der @hhla eingesetztes Tool, das ursprünglich auf dem @jump‑Framework von Vividsolutions aus dem Jahr 2003 basiert. #needsCite
+Der @tge ist ein von der @hhla eingesetztes Tool, das ursprünglich auf dem Open-Source @jump‑Framework von Vividsolutions aus dem Jahre 2007 basiert. [@wiki]
 
 Um 2012 entwickelte die @hhla ein eigenes Plugin, das speziell auf die Anforderungen des Unternehmens zugeschnitten wurde. Dieses Plugin erweitert den Funktionsumfang des @tge erheblich: Es ermöglicht unter anderem die detaillierte Darstellung von Terminals sowie den Export in verschiedene, für ein @tos notwendige, proprietäre Formate. Darüber hinaus wurde der zugrunde liegende Quellcode umfassend an die internen @hhla‑Prozesse und technischen Vorgaben angepasst. #needsCite
 

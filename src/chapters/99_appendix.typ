@@ -19,8 +19,6 @@
   #pagebreak()
 == N4NodeMoveseCase mit allen veränderungen
 
-
-
   #codeblock("../res/UseCaseGeometryModifiedN4Node.java", "Java"),
   #figure(
     [],
