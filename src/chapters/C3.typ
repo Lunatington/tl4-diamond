@@ -3,4 +3,4 @@
 #needsSpelling
  [@N4-Node-Move-Usecase]
 
-Als erstes wurde sich der Quellcode des Plugins angeschaut welches die K4-Kanten-Verschiebung regelt: ```"UseCaseGeometryModifiedN4Node.java"```. #needsCite
+Als erstes wurde sich der Quellcode des Plugins angeschaut welches die K4-Kanten-Verschiebung regelt: ```"UseCaseGeometryModifiedN4Node.java"```. 
