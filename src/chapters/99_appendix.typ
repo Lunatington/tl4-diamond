@@ -49,6 +49,15 @@
     caption: [Ausgeführt wenn eine Node bewegt wird (nach den Änderungen)],
   ) <N4-Node-Move-Usecase-with-all-changes>  
 
+== AbstractUseCase
+  #codeblock("../res/AbstractUseCase.java", "Java"),
+  #figure(
+    [],
+    kind: "Anhang",
+    supplement: "Anhang",
+    caption: [Klasse von der alle UseCases erben],
+  ) <AbstractUseCaseJava>  
+
 == Code 
 
   == Text
