@@ -1,12 +1,20 @@
 #import "../components/code.typ": codeblock
 
-== GeoEditor Wiki-Page
+== GeoEditor Wiki-Pages
   #figure(
   [@tge HHLA-Wiki-Page],
   kind: "Anhang",
   supplement: "Anhang",
   caption: [@tge HHLA-Wiki-Page],
 ) <wiki>
+
+  #figure(
+  [TerminalGeometrie HHLA-Wiki-Page],
+  kind: "Anhang",
+  supplement: "Anhang",
+  caption: [TerminalGeometrie HHLA-Wiki-Page],
+) <wiki-TerminalGeometrie>
+
 == N4NodeMoveUseCase
   
   #codeblock("../res/UseCaseGeometryModifiedN4Nodebefore.java", "Java")
