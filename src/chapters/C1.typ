@@ -14,11 +14,11 @@ umfasst, darunter den Umschlag von Massengütern, Fruchtlogistik sowie container
 
 = Programmvorstellung
 #needsSpelling
-#todo("Michael Fragen wie der GeoEditor entstanden ist")
-Der @tge ist ein von der @hhla eingesetztes Tool, das ursprünglich auf dem Open-Source @jump‑Framework von Vividsolutions aus dem Jahre 2007 basiert. [@wiki]
 
-Um 2012 entwickelte die @hhla ein eigenes Plugin, das speziell auf die Anforderungen des Unternehmens zugeschnitten wurde. Dieses Plugin erweitert den Funktionsumfang des @tge erheblich: Es ermöglicht unter anderem die detaillierte Darstellung von Terminals sowie den Export in verschiedene, für ein @tos notwendige, proprietäre Formate. Darüber hinaus wurde der zugrunde liegende Quellcode umfassend an die internen @hhla‑Prozesse und technischen Vorgaben angepasst. #needsCite
+Der @tge ist ein von der @hhla eingesetztes Tool, das ursprünglich auf dem Open-Source-Framework @jump von Vividsolutions aus dem Jahre 2002 basiert. @JUMPGIS @Editor_Wiki
+
+2007 entwickelte die @hhla ein eigenes Plugin für @jump, welches speziell auf die Anforderungen des Unternehmens zugeschnitten wurde. Dieses Plugin erweitert den Funktionsumfang des @tge erheblich: Es ermöglicht unter anderem die detaillierte Darstellung von Terminals sowie den Export in verschiedene, für ein @tos notwendige, proprietäre Formate. Darüber hinaus wurde der zugrunde liegende Quellcode umfassend an die internen @hhla‑Prozesse und technischen Vorgaben angepasst. @Editor_Wiki
 
 Die ursprüngliche Version von @jump, wie sie die @hhla einsetzt, ist heute nicht mehr in dieser Form verfügbar. Stattdessen existiert das Projekt inzwischen als Open‑JUMP, eine weiterentwickelte und offene Variante, die von einer Community gepflegt wird und funktional deutlich über den Stand der alten Vividsolutions‑Version hinausgeht. @JUMPGIS
 
-Der @hhla @tge basiert auf der @jdk Version 8 aus dem Jahr 2014. Zu diesem Zeitpunkt führte die @hhla ein Update von der zuvor eingesetzten @jdk XX #needsCite auf die @jdk 8 durch, um Kompatibilität, Stabilität und langfristige Wartbarkeit sicherzustellen. #needsCite
+Der @hhla @tge basiert auf der @jdk Version 8 aus dem Jahr 2014. 2017 führte die @hhla ein Update von der zuvor eingesetzten @jdk version  auf die @jdk 8 durch, um Kompatibilität, Stabilität und langfristige Wartbarkeit sicherzustellen. @Editor_Wiki
