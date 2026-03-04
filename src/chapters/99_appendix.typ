@@ -41,7 +41,7 @@
   #pagebreak()
 == N4NodeMoveseCase mit allen veränderungen
 
-  #codeblock("../res/UseCaseGeometryModifiedN4Node.java", "Java"),
+  #codeblock("../res/UseCaseGeometryModifiedN4Node.java", "Java")
   #figure(
     [],
     kind: "Anhang",
@@ -50,13 +50,22 @@
   ) <N4-Node-Move-Usecase-with-all-changes>  
 
 == AbstractUseCase
-  #codeblock("../res/AbstractUseCase.java", "Java"),
+  #codeblock("../res/AbstractUseCase.java", "Java")
   #figure(
     [],
     kind: "Anhang",
     supplement: "Anhang",
     caption: [Klasse von der alle UseCases erben],
   ) <AbstractUseCaseJava>  
+
+== Error Log
+  #codeblock("../res/Error.java", "Java")
+    #figure(
+    [],
+    kind: "Anhang",
+    supplement: "Anhang",
+    caption: [Error Log, wenn Exception auftritt],
+  ) <ErrorLog>  
 
 == Code 
 
