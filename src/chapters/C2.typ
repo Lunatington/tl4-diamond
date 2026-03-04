@@ -24,8 +24,8 @@ Direkt nach dem Verschieben tritt die ```"ConcurrentModificationException"``` au
 
 #figure(
   image("../res/Bild nach Exception.png", height: 10cm),
-  caption: "Bild vor der Exception",
-) <bild1>
+  caption: "Bild von der Exception",
+) <bild2>
 == ConcurrentModificationException
 Die ```"ConcurrentModificationException"``` in Java ist eine Laufzeitausnahme, die auftritt, wenn eine Collection während einer Iteration unerwartet strukturell verändert wird. @Oracle_Concurrent @IeeeConcurrent #needsCite
 
@@ -34,3 +34,25 @@ Viele der gängigen Java-Collections wie ArrayList, HashMap oder HashSet verwend
 Dieser Mechanismus dient dazu, inkonsistente Zustände zu verhindern, die entstehen könnten, wenn eine Collection während des Durchlaufens verändert wird. @Oracle_Concurrent @IeeeConcurrent #needsCite
 
 == Analyse Error-Log
+
+Wenn die Exception auftritt, erzeugt Java einen Logeintrag, der anzeigt, an welcher Stelle der Fehler entstanden ist. @errorlog
+
+An erster Stelle steht:
+```Java
+java.util.ConcurrentModificationException 
+    at java.util.TreeMap$PrivateEntryIterator.nextEntry(TreeMap.java:1211) 
+    at java.util.TreeMap$KeyIterator.next(TreeMap.java:1265) 
+```
+
+Das deutet darauf hin, dass während der Iteration über eine TreeMap gleichzeitig eine Veränderung an genau dieser TreeMap vorgenommen wird.
+
+Danach folgt:
+
+```Java
+at de.hhla.tools.geoeditor.terminal.usecase.geometry.UseCaseGeometryModifiedN4Node
+.execute(UseCaseGeometryModifiedN4Node.java:81) 
+```
+
+Dieser Eintrag legt nahe, dass der Fehler in dem Codeabschnitt entsteht, der für die Bewegung bzw. Anpassung der Kanten zuständig ist.
+
+Darauffolgend erscheinen zahlreiche weitere Logeinträge, die auf UI‑Komponenten verweisen. Das passt zu der Beobachtung, dass während der Exception beide Punkte im Interface angezeigt werden – was ebenfalls ein Hinweis auf eine fehlerhafte oder konkurrierende Aktualisierung im UI‑Kontext sein kann.

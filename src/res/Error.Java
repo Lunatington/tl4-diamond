@@ -4,6 +4,8 @@ at java.util.TreeMap$PrivateEntryIterator.nextEntry(TreeMap.java:1211)
 
 at java.util.TreeMap$KeyIterator.next(TreeMap.java:1265) 
 
+at de.hhla.tools.geoeditor.terminal.usecase.geometry.UseCaseGeometryModifiedN4Node.execute(UseCaseGeometryModifiedN4Node.java:81) 
+
 at com.vividsolutions.jump.workbench.ui.AbstractSelection.getSelectedItems(AbstractSelection.java:192) 
 
 at com.vividsolutions.jump.workbench.ui.AbstractSelection.getSelectedItems(AbstractSelection.java:178) 
