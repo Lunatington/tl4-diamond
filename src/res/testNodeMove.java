@@ -1,6 +1,3 @@
-package de.hhla.tools.geoeditor.dataimport;
-
-
 public class TestNodeMove extends AbstractTerminalGeometrieeditorTestCase {
     private static final String Graph = "MainGraph";
     private static final int maxEdges = 80;

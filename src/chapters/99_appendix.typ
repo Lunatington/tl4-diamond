@@ -67,6 +67,15 @@
     caption: [Error Log, wenn Exception auftritt],
   ) <ErrorLog>  
 
+== TestNodeMove
+#codeblock("../res/testNodeMove.java", "Java")
+    #figure(
+    [],
+    kind: "Anhang",
+    supplement: "Anhang",
+    caption: [JUnit-Test zum reproduzieren des Fehlers],
+  ) 
+
 == Code 
 
   == Text
