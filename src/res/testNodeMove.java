@@ -22,11 +22,9 @@ public class TestNodeMove extends AbstractTerminalGeometrieeditorTestCase {
 
         //Test ob exception bei bewegung von kanten
         try {
-         // Alte Geometrie sichern BEVOR du sie änderst
             List<Feature> oldFeatures = new ArrayList<>();
             oldFeatures.add((Feature) node.clone());
 
-            // Jetzt Geometrie ändern
             node.setGeometry(geometryFactory.createPoint(new Coordinate(maxCoordinate, maxCoordinate)));
 
             List<Feature> featureList = new ArrayList<>();
@@ -37,8 +35,7 @@ public class TestNodeMove extends AbstractTerminalGeometrieeditorTestCase {
                     layerManager.getLayer(TerminalLayer.NODES_N4.getName()), oldFeatures));
             
             } catch (Exception e) {
-            e.printStackTrace();
-            fail("Exception: " + e.getMessage());
+            fail();
         }
     }
 
