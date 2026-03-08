@@ -85,7 +85,23 @@
     caption: [JUnit-Test zum reproduzieren des Fehlers],
   ) 
 
+== GetSelectedItems() vor dem Fix
+#codeblock("../res/GetSelectedItemsbefore.java", "Java")
+    #figure(
+    [],
+    kind: "Anhang",
+    supplement: "Anhang",
+    caption: [GetSelectedItems() vor dem Fix],
+  ) 
 
+== GetSelectedItems() nach dem Fix
+#codeblock("../res/GetSelectedItemsafter.java", "Java")
+    #figure(
+    [],
+    kind: "Anhang",
+    supplement: "Anhang",
+    caption: [GetSelectedItems() nach dem Fix],
+  ) 
 
 == Code 
 
