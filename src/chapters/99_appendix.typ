@@ -67,6 +67,15 @@
     caption: [Error Log, wenn Exception auftritt],
   ) <ErrorLog>  
 
+== AbstractGeometrieEditorTestCase
+#codeblock("../res/AbstractTest.java", "Java")
+    #figure(
+    [],
+    kind: "Anhang",
+    supplement: "Anhang",
+    caption: [JUnit Abstracter TestCase von welchem alle Tests erben],
+  ) 
+
 == TestNodeMove
 #codeblock("../res/testNodeMove.java", "Java")
     #figure(
@@ -75,6 +84,8 @@
     supplement: "Anhang",
     caption: [JUnit-Test zum reproduzieren des Fehlers],
   ) 
+
+
 
 == Code 
 
