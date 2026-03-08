@@ -85,6 +85,15 @@
     caption: [JUnit-Test zum reproduzieren des Fehlers],
   ) 
 
+== AbstractSelection()
+#codeblock("../res/AbstractSelection.java", "Java")
+    #figure(
+    [],
+    kind: "Anhang",
+    supplement: "Anhang",
+    caption: [AbstractsSelection],
+  ) 
+
 == GetSelectedItems() vor dem Fix
 #codeblock("../res/GetSelectedItemsbefore.java", "Java")
     #figure(
