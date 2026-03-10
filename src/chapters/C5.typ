@@ -1,5 +1,8 @@
 #import "../components/formatting.typ": clickable_link, needsCite, todo, needsSpelling
+
 = Debugging mittels Debugger
+#needsSpelling
+
 Um die genaue Ursache der Exception zu lokalisieren, wurde die Anwendung mithilfe eines Debuggers schrittweise durchlaufen. Dabei wurde der Fehlerfall manuell in der UI ausgelöst und der Programmfluss Schritt für Schritt verfolgt, um die Stelle im Code zu identifizieren, an der die Exception geworfen wird. Mithilfe des Debuggers konnte festgestellt werden, dass die Exception in der Methode ```"getSelectedItems(Layer layer)"``` der abstrakten Klasse ```"AbstractSelection"``` auftrat. 
 
 Diese Klasse ist Teil der UI-Schicht und dient als abstrakte Basisklasse zur Verwaltung der vom Benutzer ausgewählten Elemente. Intern speichert sie eine ```"Map<Layer, CollectionMap<Feature, Integer>>"```, welche jeder ```"Layer"``` eine ```"CollectionMap"``` zuordnet. Diese ```"CollectionMap"``` wiederum ordnet jedem ```"Feature"``` eine Sammlung von Indizes zu, die angeben, welche geometrischen Elemente des jeweiligen ```"Feature"``` selektiert sind. @selectitemsbefore #needsCite
