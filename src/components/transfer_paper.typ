@@ -70,11 +70,11 @@
   // Table of Contents
   toc(heading_texts.contents)
 
-  // List of Figures
-  list_of(heading_texts.figures, image)
-
   // Sperrvermerk
   sperrvermerk_page(heading_texts.sperrvermerk, sperrvermerk_text)
+
+  // List of Figures
+  list_of(heading_texts.figures, image)
 
   // List of Tables
   list_of(heading_texts.tables, table)
@@ -98,7 +98,7 @@
   set par(justify: true)
   {
     show heading.where(level: 1): it => {
-      pagebreak(weak: true)
+      //pagebreak(weak: true)
       it
     }
     body

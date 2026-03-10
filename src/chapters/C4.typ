@@ -1,8 +1,10 @@
 #import "../components/formatting.typ": clickable_link, needsCite, todo, needsSpelling
 = JUnit-Tests
-#needsSpelling
-
-Um die Behebung der Exception zu erleichtern, wurde entschieden, einen JUnit‑Test zu schreiben, der das Auftreten des Fehlers schneller überprüfbar macht. Dadurch muss nicht jedes Mal das gesamte Programm gestartet werden, um festzustellen, ob die Exception erneut ausgelöst wird. Ein solcher Test isoliert den relevanten Codeabschnitt und ermöglicht es, die problematische Situation gezielt und wiederholt auszuführen, was den Debugging‑Prozess deutlich beschleunigt.
+Um die Behebung der Exception zu erleichtern, wurde entschieden, einen JUnit-Test zu schreiben,
+der das Auftreten des Fehlers schneller überprüfbar macht. Dadurch muss nicht jedes Mal das
+gesamte Programm gestartet werden, um festzustellen, ob die Exception erneut ausgelöst wird. Ein
+solcher Test isoliert den relevanten Codeabschnitt und ermöglicht es, die problematische Situation
+gezielt und wiederholt auszuführen, was den Debugging-Prozess deutlich beschleunigt.
 == Definition
 JUnit ist ein weit verbreitetes Testframework für Java, das dabei hilft, Code automatisiert zu überprüfen und Fehler frühzeitig zu erkennen. Es ermöglicht das Schreiben kleiner, wiederholbarer Testmethoden, die einzelne Funktionen oder Abläufe isoliert ausführen. Dadurch lassen sich Fehlerquellen schneller eingrenzen, weil Tests unabhängig vom restlichen Programm laufen und exakt zeigen, welche Methode korrekt funktioniert und welche nicht. @Beck_Gamma_2000 @1383111 @app11167250
 == Reproduzierung des Fehlers per JUnit-Test
@@ -53,6 +55,18 @@ try {
   }
 ```
 
-Bei der Ausführung des Tests mit 80 Kanten ist der Test jedoch nicht wie erwartet fehlgeschlagen. Stattdessen ist der Test fehlerfrei durchgelaufen. In der Konsolenausgabe war zu erkennen, dass die Kanten tatsächlich erfolgreich verschoben wurden. Um sicherzustellen, dass es sich nicht um einen Grenzwerteffekt handelt, wurde die Anzahl der Kanten schrittweise erhöht. Selbst bei 80.000 Kanten wurde keine Exception geworfen und der Test lief erneut ohne Fehler durch.
+Bei der Ausführung des Tests mit 80 Kanten ist der Test jedoch nicht wie erwartet fehlgeschlagen.
+Stattdessen ist der Test fehlerfrei durchgelaufen. In der Konsolenausgabe war zu erkennen, dass die
+Kanten tatsächlich erfolgreich verschoben wurden. Um sicherzustellen, dass es sich nicht um einen
+Grenzwerteffekt handelt, wurde die Anzahl der Kanten schrittweise erhöht. Selbst bei 80.000 Kanten
+wurde keine Exception geworfen und der Test lief erneut ohne Fehler durch.
 
-Daraus lässt sich schlussfolgern, dass der Fehler nicht in der Workbench-Logik selbst liegt, da diese die Verschiebung der Kanten korrekt verarbeitet. Da der Fehler ausschließlich beim manuellen Verschieben in der Anwendung auftritt, liegt die Ursache vermutlich in der UI-Schicht. Der Fokus der weiteren Fehleranalyse wird daher auf die Benutzeroberfläche und deren Interaktion mit der zugrunde liegenden Logik gerichtet.
+#todo("EEvtl. Foto von console logs oder console logs als codeblock")
+Daraus lässt sich schlussfolgern, dass der Fehler nicht in der Geschäftslogik des UseCases selbst
+liegt, da diese die Verschiebung der Kanten korrekt verarbeitet. Der JUnit-Test simuliert
+ausschließlich den direkten Aufruf der execute()-Methode, ohne die UI-Schicht und deren
+Event-Verarbeitung einzubeziehen. Da der Fehler ausschließlich beim manuellen Verschieben in
+der laufenden Anwendung auftritt, liegt die Ursache vermutlich in der Interaktion zwischen der
+Kantenverschiebung und der gleichzeitigen UI-Aktualisierung. Der Fokus der weiteren
+Fehleranalyse wurde daher auf die Benutzeroberfläche und deren Zusammenspiel mit der
+zugrunde liegenden Logik gerichtet.

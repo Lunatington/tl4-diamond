@@ -13,7 +13,6 @@ Das Portfolio wird durch das Segment Logistik erweitert, das verschiedene hafenn
 umfasst, darunter den Umschlag von Massengütern, Fruchtlogistik sowie containerbezogene Service und Transportleistungen. @HHLA_Geschaeftsbericht2024 
 
 = Programmvorstellung
-#needsSpelling
 
 Der @tge ist ein von der @hhla eingesetztes Tool, das ursprünglich auf dem Open-Source-Framework @jump von Vividsolutions aus dem Jahre 2002 basiert. @JUMPGIS @Editor_Wiki
 
