@@ -1,6 +1,6 @@
 #import "header.typ": header
 #import "translations.typ": english_heading_texts, german_heading_texts
-#import "../pages/outline.typ": toc, list_of
+#import "../pages/outline.typ": toc, list_of, sperrvermerk_page
 #import "../pages/cover.typ": cover
 #import "../dependencies.typ": zebraw, zebraw-themes, make-glossary, print-glossary, register-glossary
 #import "../abbreviations.typ": abbreviation_list
@@ -25,6 +25,7 @@
   topic,
   course,
   appendix_content: none,
+  sperrvermerk_text: none,
   body,
 ) = {
   // initialize extensions
@@ -71,6 +72,9 @@
 
   // List of Figures
   list_of(heading_texts.figures, image)
+
+  // Sperrvermerk
+  sperrvermerk_page(heading_texts.sperrvermerk, sperrvermerk_text)
 
   // List of Tables
   list_of(heading_texts.tables, table)
