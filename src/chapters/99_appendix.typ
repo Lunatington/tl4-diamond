@@ -1,6 +1,6 @@
 #import "../components/code.typ": codeblock
 
-== GeoEditor Wiki-Pages
+== GeoEditor Wiki-Page
   #figure(
   [],
   kind: "Anhang",
@@ -8,6 +8,9 @@
   caption: [@tge HHLA-Wiki-Page],
 ) <wiki>
 
+#pagebreak()
+
+== Terminalgeometrie Wiki-Page
   #figure(
   [],
   kind: "Anhang",
@@ -15,6 +18,9 @@
   caption: [TerminalGeometrie HHLA-Wiki-Page],
 ) <wiki-TerminalGeometrie>
 
+#pagebreak()
+
+== GeoEditor N4-XPS Wiki-Page
   #figure(
   [],
   kind: "Anhang",
@@ -22,12 +28,16 @@
   caption: [GeoEditor N4-XPS HHLA-Wiki-Page],
 ) <wiki-Geo-Xps>
 
+#pagebreak()
+== N4-XPS Wiki-Page
+
   #figure(
   [],
   kind: "Anhang",
   supplement: "Anhang",
   caption: [N4-XPS HHLA-Wiki-Page],
 ) <wiki-Xps>
+#pagebreak()
 
 == N4NodeMoveUseCase
   
