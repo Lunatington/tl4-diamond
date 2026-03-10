@@ -34,7 +34,7 @@ Direkt nach dem Verschieben tritt die ```"ConcurrentModificationException"``` au
 == ConcurrentModificationException
 Die ```"ConcurrentModificationException"``` in Java ist eine Laufzeitausnahme, die auftritt, wenn eine
 Collection während einer Iteration unerwartet strukturell verändert wird. Sie ist im Paket
-java.util definiert und erbt von der Klasse RuntimeException. @Oracle_Concurrent @IeeeConcurrent
+java.util definiert und erbt von der Klasse RuntimeException. @Oracle_Concurrent @IeeeConcurrent @oracle_arraylist
 
 Viele der gängigen Java-Collections wie ArrayList, HashMap oder HashSet verwenden sogenannte
 Fail-fast-Iteratoren. Diese Iteratoren überwachen intern einen Modifikationszähler (modCount), der
@@ -47,7 +47,7 @@ Multi-Thread-Situationen auftreten. @Oracle_Concurrent @IeeeConcurrent
 Dieser Mechanismus dient dazu, inkonsistente Zustände zu verhindern, die entstehen könnten,
 wenn eine Collection während des Durchlaufens verändert wird. Es handelt sich dabei um ein
 sogenanntes „Best-Effort"-Verhalten: Die Exception wird nicht garantiert geworfen, sondern nur
-dann, wenn die Änderung vom Iterator erkannt wird. @Oracle_Concurrent @IeeeConcurrent
+dann, wenn die Änderung vom Iterator erkannt wird. @Oracle_Concurrent @IeeeConcurrent @oracle_arraylist
 
 == Analyse Error-Log
 

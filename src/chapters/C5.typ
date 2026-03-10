@@ -72,7 +72,7 @@ Zeitpunkt des Methodenaufrufs erstellt. Da diese Liste ausschließlich lokal exi
 Änderungen an der ursprünglichen Map durch andere Prozesse keinen Einfluss mehr auf die laufende
 Iteration. Dieser Ansatz ist leichtgewichtig und erfordert keine weitreichenden Änderungen an der
 bestehenden Codebasis. 
-@selectitemsafter 
+@selectitemsafter @goetz2006jcip @oracle_arraylist
 
 Neben dem gewählten Snapshot-Ansatz wurden auch alternative Lösungsmöglichkeiten in Betracht
 gezogen. Der Einsatz einer ConcurrentHashMap anstelle der bestehenden TreeMap hätte zwar
