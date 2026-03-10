@@ -45,7 +45,7 @@ der ```"Event-Dispatch-Thread"``` von ```"Swing"``` weitere UI-Events, die ebenf
 zugreifen. Bei einer geringen Anzahl an Kanten wird die Iteration so schnell abgeschlossen, dass
 kein konkurrierender Zugriff stattfindet. Bei einer größeren Anzahl an Kanten dauert die Iteration
 hingegen länger, wodurch die Wahrscheinlichkeit einer gleichzeitigen Modifikation steigt und
-der Fail-fast-Iterator die ```"ConcurrentModificationException"``` wirft.
+der Fail-fast-Iterator die ```"ConcurrentModificationException"``` wirft. @oracle_treemap @Oracle_Concurrent
 
 = Fix
 
