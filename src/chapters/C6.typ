@@ -7,7 +7,7 @@ noch an der ursprünglichen Position sichtbar, während das verschobene Element 
 neuen Position dargestellt wurde.
 
 #figure(
-  image("../res/Bild_Nach_Fix.png", height: 7cm),
+  image("../res/Bild_Nach_Fix.png", height: 10cm),
   caption: "Beide Knoten und Kanten noch sichtbar",
 )
 
