@@ -9,7 +9,12 @@
 	"Technische Informatik, T23a",
 	appendix_content: include "chapters/99_appendix.typ",
 	sperrvermerk_text: [
-    Diese Transferarbeit enthält vertrauliche Informationen. Die Weitergabe des Inhalts dieser Arbeit sowie von Teilen daraus an Dritte ist ohne ausdrückliche Genehmigung nicht gestattet. Diese Arbeit darf ausschließlich den dazu befugten Personen zugänglich gemacht werden.
+    Die vorliegende Hausarbeit mit dem Titel ```„Analyse und Lösung einer ConcurrentModificationException im Terminal Geometrieeditor im Rahmen eines Debugging-Prozesses, in Java"“``` enthält vertrauliche Informationen des Unternehmens ```"Hamburger Hafen und Logistik AG"``` und ist ausschließlich zur Einsicht durch die prüfenden Personen der Nordakademie bestimmt.
+
+		Eine Veröffentlichung, Vervielfältigung oder Weitergabe der Arbeit – auch in Auszügen – ist ohne ausdrückliche schriftliche Genehmigung des Unternehmens sowie der Autorin untersagt.
+
+		Diese Arbeit wird ausschließlich zu Prüfungszwecken vorgelegt.
+
   ],
 )
 
