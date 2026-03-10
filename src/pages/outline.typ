@@ -11,6 +11,13 @@
   pagebreak(weak: true)
 }
 
+// Sperrvermerk page
+#let sperrvermerk_page(title, body) = {
+  heading[#title]
+  body
+  pagebreak(weak: true)
+}
+
 // List of x
 #let list_of(title, kind) = {
   heading[#title]
