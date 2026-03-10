@@ -1,6 +1,6 @@
 #import "../components/formatting.typ": clickable_link, needsCite, todo, needsSpelling
 
-= Debugging mittels Debugger
+= Debugging mittels Debugger <Kapitel6>
 
 Um die genaue Ursache der Exception zu lokalisieren, wurde die Anwendung mithilfe eines
 Debuggers schrittweise durchlaufen. Dabei wurde der Fehlerfall manuell in der UI ausgelöst und
@@ -47,7 +47,7 @@ kein konkurrierender Zugriff stattfindet. Bei einer größeren Anzahl an Kanten 
 hingegen länger, wodurch die Wahrscheinlichkeit einer gleichzeitigen Modifikation steigt und
 der Fail-fast-Iterator die ```"ConcurrentModificationException"``` wirft. @oracle_treemap @Oracle_Concurrent
 
-= Fix
+= Fix <Kapitel7>
 
 Um dieses Problem zu beheben, wurde zu Beginn der Methode ein Snapshot der KeySet-Collection
 erstellt, indem die Schlüssel in eine neue lokale ArrayList kopiert werden. Da diese Liste lokal

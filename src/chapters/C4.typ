@@ -1,5 +1,5 @@
 #import "../components/formatting.typ": clickable_link, needsCite, todo, needsSpelling
-= JUnit-Tests
+= JUnit-Tests <Kapitel5>
 Um die Behebung der Exception zu erleichtern, wurde entschieden, einen JUnit-Test zu schreiben,
 der das Auftreten des Fehlers schneller überprüfbar macht. Dadurch muss nicht jedes Mal das
 gesamte Programm gestartet werden, um festzustellen, ob die Exception erneut ausgelöst wird. Ein
@@ -8,7 +8,7 @@ gezielt und wiederholt auszuführen, was den Debugging-Prozess deutlich beschleu
 == Definition
 JUnit ist ein weit verbreitetes Testframework für Java, das dabei hilft, Code automatisiert zu überprüfen und Fehler frühzeitig zu erkennen. Es ermöglicht das Schreiben kleiner, wiederholbarer Testmethoden, die einzelne Funktionen oder Abläufe isoliert ausführen. Dadurch lassen sich Fehlerquellen schneller eingrenzen, weil Tests unabhängig vom restlichen Programm laufen und exakt zeigen, welche Methode korrekt funktioniert und welche nicht. @Beck_Gamma_2000 @1383111 @app11167250
 == Reproduzierung des Fehlers per JUnit-Test
-Für einen JUnit-Test im @tge stellt das HHLA-Plugin eine Oberklasse zur Verfügung: die "GeoEditorTest"-Klasse. Von dieser erbt der JUnit-Test, mit dem der Fehler und die Exception reproduziert werden sollen.
+Für einen JUnit-Test im @tge stellt das HHLA-Plugin eine Oberklasse zur Verfügung: die "GeoEditorTest"-Klasse. Von dieser erbt der JUnit-Test, mit dem der Fehler und die Exception reproduziert werden sollen. @abstracttest
 
 Zuerst wird eine Einstiegsfunktion erstellt, welche beim Test-Start ausgeführt wird. Die Einstiegsfunktion wird über der Deklaration der Funktion mit ```"@before"``` deklariert. In dieser wird die Superklasse instanziiert, damit ihre Funktionen genutzt werden können.
 Eine Testklasse kann mehrere Tests enthalten; jeder Test wird ähnlich wie die Einstiegsfunktion mit ```"@test"``` deklariert. @Beck_Gamma_2000 @junit4_test_annotation
@@ -20,7 +20,7 @@ public void setUp() throws Exception {
   }
 ```
 
-Um das Problem zu reproduzieren, müssen zunächst der Mittelpunkt und die Kanten erstellt werden. Diese können durch die Funktionen "createN4Node()" und "createN4Edge()" der Oberklasse erstellt werden. Dabei wird die Anzahl der zu erstellenden Kanten anhand der finalen Variable "maxEdgesN4" festgelegt. @testnodemove @abstracttest
+Um das Problem zu reproduzieren, müssen zunächst der Mittelpunkt und die Kanten erstellt werden. Diese können durch die Funktionen ```"createN4Node()" und "createN4Edge()"``` der Oberklasse erstellt werden. Dabei wird die Anzahl der zu erstellenden Kanten anhand der finalen Variable ```"maxEdgesN4"``` festgelegt. @testnodemove @abstracttest
 ```Java
 @Test
 public void MoveNodeWithManyEdges() {
@@ -35,7 +35,7 @@ public void MoveNodeWithManyEdges() {
 
 In einem For-Loop werden alle Kanten erstellt und dem Hauptknoten ```"Main"``` zugewiesen.
 
-Als Nächstes wird die N4-Node auf einen anderen Punkt verschoben und das Feature-Event ```"GEOMETRY_CHANGED"``` aufgerufen, welches den ```"UseCaseGeometryModiefedN4Node"``` aufruft.
+Als Nächstes wird die N4-Node auf einen anderen Punkt verschoben und das Feature-Event ```"GEOMETRY_CHANGED"``` aufgerufen, welches den ```"UseCaseGeometryModifiedN4Node"``` aufruft.
 ```Java
 try {
   List<Feature> oldFeatures = new ArrayList<>();
@@ -61,7 +61,6 @@ Kanten tatsächlich erfolgreich verschoben wurden. Um sicherzustellen, dass es s
 Grenzwerteffekt handelt, wurde die Anzahl der Kanten schrittweise erhöht. Selbst bei 80.000 Kanten
 wurde keine Exception geworfen und der Test lief erneut ohne Fehler durch.
 
-#todo("EEvtl. Foto von console logs oder console logs als codeblock")
 Daraus lässt sich schlussfolgern, dass der Fehler nicht in der Geschäftslogik des UseCases selbst
 liegt, da diese die Verschiebung der Kanten korrekt verarbeitet. Der JUnit-Test simuliert
 ausschließlich den direkten Aufruf der execute()-Methode, ohne die UI-Schicht und deren

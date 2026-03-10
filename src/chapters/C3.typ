@@ -1,5 +1,5 @@
 #import "../components/formatting.typ": clickable_link, needsCite, todo, needsSpelling
-= Analyse UseCaseGeometryModifiedN4Node.java
+= Analyse UseCaseGeometryModifiedN4Node.java <Kapitel4>
 
 Zunächst wurde der Quellcode des Plugins analysiert, welches die Verschiebung von N4-Knotenpunkten
 regelt: ```"UseCaseGeometryModifiedN4Node.java"```. Da der Fehler ausschließlich bei der Verschiebung
@@ -7,7 +7,7 @@ eines Knotenpunktes auftritt, lag die Vermutung nahe, dass der Fehler in diesem 
 
 Die Klasse erbt von der Klasse ```"AbstractUseCase"```, welche das Grundgerüst für einen UseCase
 bereitstellt.
-Da im Error-Log die Zeile 81 referenziert wurde, wurde zuerst dieser Codeabschnitt kontrolliert.
+Da im Error-Log die Zeile 81 referenziert wurde, wurde zuerst dieser Codeabschnitt kontrolliert. @abstractusecase
 ```Java
 if (layerChanged) {
     layerManager.getLayer(TerminalLayer.EDGES_N4.getName())

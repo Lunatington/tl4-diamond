@@ -49,7 +49,7 @@
    caption: [Ausgeführt wenn eine Node bewegt wird (vor den Änderungen)],
   ) <N4-Node-Move-Usecase>
   #pagebreak()
-== N4NodeMoveseCase mit allen veränderungen
+== N4NodeMoveUseCase mit allen Veränderungen
 
   #codeblock("../res/UseCaseGeometryModifiedN4Node.java", "Java")
   #figure(
@@ -121,8 +121,3 @@
     supplement: "Anhang",
     caption: [GetSelectedItems() nach dem Fix],
   ) 
-
-== Code 
-
-  == Text
-  #lorem(50)

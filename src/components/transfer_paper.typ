@@ -77,7 +77,7 @@
   list_of(heading_texts.figures, image)
 
   // List of Tables
-  list_of(heading_texts.tables, table)
+  //list_of(heading_texts.tables, table)
 
   // List of Listings
   //list_of(heading_texts.listings, raw)

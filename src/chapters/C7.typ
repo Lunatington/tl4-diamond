@@ -5,3 +5,6 @@ Die vorliegende Arbeit dokumentiert die systematische Analyse und Behebung einer
 Der Debugging-Prozess umfasste die Fehlerreproduktion, eine Error-Log-Analyse, das Schreiben eines JUnit-Tests sowie den Einsatz eines Debuggers. Dabei zeigte sich, dass JUnit-Tests allein nicht ausreichen, um UI-bezogene Concurrency-Probleme zu reproduzieren, da sie die Event-Verarbeitung des Frameworks nicht simulieren. Behoben wurde das Problem durch einen lokalen Snapshot der Map-Schlüssel vor der Iteration – ein leichtgewichtiger Ansatz, der keine tiefgreifenden Änderungen am JUMP-Quellcode erfordert. Zusätzlich wurde ein nach dem Fix sichtbar gewordenes Darstellungsproblem durch einen expliziten Repaint über SwingUtilities.invokeLater() gelöst.
 
 Der Fall verdeutlicht, dass bei der Arbeit mit älteren Frameworks, deren Quellcode nicht vollständig unter eigener Kontrolle steht, ein defensiver Programmierstil – etwa durch das Erstellen lokaler Kopien vor Iterationen – die Robustheit des Gesamtsystems erheblich steigern kann.
+
+
+(Ohne Bilder 10.5 Seiten)

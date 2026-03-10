@@ -1,7 +1,7 @@
 #import "../components/formatting.typ": clickable_link, needsCite, todo, needsSpelling
 = Unternehmensvorstellung
 Die @hhla ist ein führender europäischer Hafen und Logistikkonzern,
-der als strategische Management Holding agiert. [e] Der Konzern gliedert sich in die
+der als strategische Management Holding agiert. Der Konzern gliedert sich in die
 zwei großen Teilbereiche Hafenlogistik und Immobilien. Der Teilkonzern Hafenlogistik umfasst
 die Segmente Container, Intermodal und Logistik und bildet das hafenbezogene Kerngeschäft der
 @hhla. @HHLA_Geschaeftsbericht2024 @HamburgerHafenundLogistikAG

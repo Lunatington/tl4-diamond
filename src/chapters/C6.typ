@@ -1,5 +1,5 @@
 #import "../components/formatting.typ": clickable_link, needsCite, todo, needsSpelling
-= Refresh
+= Refresh <Kapitel8>
 Nach der Behebung der ```"ConcurrentModificationException"``` trat ein weiteres Problem auf: Die
 UI wurde nach dem Verschieben des Knotens nicht korrekt aktualisiert, wodurch der Knoten und
 die zugehörigen Kanten doppelt in der Anwendung angezeigt wurden. Dabei war das alte Element
@@ -7,7 +7,7 @@ noch an der ursprünglichen Position sichtbar, während das verschobene Element 
 neuen Position dargestellt wurde.
 
 #figure(
-  image("../res/Bild_Nach_Fix.png", height: 12cm),
+  image("../res/Bild_Nach_Fix.png", height: 7cm),
   caption: "Beide Knoten und Kanten noch sichtbar",
 )
 
