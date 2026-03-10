@@ -82,7 +82,7 @@ der Zugriffe mittels synchronized-Blöcken möglich gewesen, birgt jedoch das Ri
 Deadlocks oder Performance-Einbußen in der UI-Schicht. Da die Änderung im Quellcode des
 @jump–Frameworks – das nicht unter der Kontrolle der @hhla–Entwicklung steht – so minimal wie
 möglich gehalten werden sollte, wurde der Snapshot-Ansatz als pragmatischer Kompromiss zwischen
-Robustheit und Wartbarkeit gewählt. 
+Robustheit und Wartbarkeit gewählt. @oracle_swing_concurrency @oracle_swing_package
 
 Es lässt sich festhalten, dass die Map durch den ```"Event-Dispatch-Thread"``` von ```"Swing"``` verändert wird,
 während die Iteration in demselben Thread, aber in einem verschachtelten Aufruf läuft. Bei einer

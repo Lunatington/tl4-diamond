@@ -29,12 +29,12 @@ Da @jump nicht jede einzelne Operation aktiv überwacht, sondern sich auf solche
 verlässt, ist ```"FeatureCollectionModified"``` ein zentraler Mechanismus, um Konsistenz sicherzustellen
 und alle abhängigen Komponenten auf dem aktuellen Stand zu halten. Gerade in interaktiven Editoren
 wie dem GeoEditor ist dieses Flag entscheidend, damit UI-Elemente und Datenmodell synchron
-bleiben und keine veralteten Geometrien angezeigt oder verarbeitet werden.
+bleiben und keine veralteten Geometrien angezeigt oder verarbeitet werden. 
 
 Wird das Flag gesetzt, während gleichzeitig andere Prozesse – etwa UI-Aktualisierungen oder
 weitere Use Cases – auf dieselbe Datenstruktur zugreifen, kann es zu Konflikten kommen.
 Genau in solchen Situationen entsteht häufig eine ```"ConcurrentModificationException"```, wie sie
-im Error-Log sichtbar wird, wenn eine TreeMap während der Iteration verändert wird. @oracle_treemap
+im Error-Log sichtbar wird, wenn eine TreeMap während der Iteration verändert wird. @oracle_treemap @Oracle_Concurrent
 
 Auf den Verdacht hin, dass die Exception durch diesen Code ausgelöst wird, wurde diese Zeile
 auskommentiert und das Programm erneut getestet. Dabei ergab sich jedoch kein anderes Ergebnis:
