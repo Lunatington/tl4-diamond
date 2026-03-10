@@ -25,12 +25,10 @@ Dies stimmt mit der ursprünglich beobachteten ```"ConcurrentModificationExcepti
 = Fix
 
 Um dieses Problem zu beheben, wurde zu Beginn der Methode ein Snapshot der KeySet-Collection erstellt, indem die Schlüssel in eine neue lokale ```"ArrayList"``` kopiert werden. Da diese Liste lokal ist und nicht von anderen Threads referenziert wird, kann sie während der Iteration nicht verändert werden, wodurch die ```"ConcurrentModificationException"``` zuverlässig verhindert wird.
-
 ```Java
 public Collection<Geometry> getSelectedItems(Layer layer) {
-  ArrayList<Geometry> selectedItems = new ArrayList<>();+
-
-  List<Feature> features = new ArrayList<>(map.keySet()); 
+  ArrayList<Geometry> selectedItems = new ArrayList<>();
+  List<Feature> features = new ArrayList<>(map.keySet()); // snapshot der von anderen Threads nicht verändert werden kann, da Lokal
     
   for (Feature feature : features) {
     selectedItems.addAll(getSelectedItems(layer, feature));
@@ -40,4 +38,7 @@ public Collection<Geometry> getSelectedItems(Layer layer) {
 }
 ```
 
-Konkret wird mit ```"new ArrayList<>(map.keySet())"``` eine neue Liste erstellt, die eine Kopie aller Schlüssel der Map zum Zeitpunkt des Methodenaufrufs enthält. Der ```"ArrayList"```-Konstruktor überträgt dabei alle Elemente der übergebenen Collection in die neue lokale Liste. Da diese Liste ausschließlich lokal existiert, haben etwaige Änderungen an der ursprünglichen Map durch andere Threads keinen Einfluss mehr auf die laufende Iteration. Die Iteration erfolgt dann über diese lokale Kopie, wodurch die ```"ConcurrentModificationException"``` zuverlässig verhindert wird. Im Gegensatz zu einer ```"ConcurrentHashMap"``` oder einer expliziten Synchronisierung ist dieser Ansatz leichtgewichtig und erfordert keine weitreichenden Änderungen an der bestehenden Codebasis. @selectitemsafter #needsCite
+Konkret wird mit ```"new ArrayList<>(map.keySet())"``` eine Kopie aller Schlüssel der Map zum Zeitpunkt des Methodenaufrufs erstellt. Da diese Liste ausschließlich lokal existiert, haben etwaige Änderungen an der ursprünglichen Map durch andere Threads keinen Einfluss mehr auf die laufende Iteration. Dieser Ansatz ist leichtgewichtig und erfordert keine weitreichenden Änderungen an der bestehenden Codebasis.
+@selectitemsafter #needsCite
+
+Es lässt sich mutmaßen, dass die Map durch einen UI-Event-Thread verändert wird, während die Iteration in einem anderen Thread läuft. Bei einer geringen Anzahl an Kanten tritt dieses Problem möglicherweise nicht auf, da die Iteration zu schnell abgeschlossen wird, als dass ein konkurrierender Zugriff stattfinden könnte. Bei einer größeren Anzahl an Kanten hingegen dauert die Iteration länger, wodurch die Wahrscheinlichkeit eines gleichzeitigen Zugriffs steigt. Der genaue Auslöser konnte jedoch nicht abschließend identifiziert werden. #needsCite
