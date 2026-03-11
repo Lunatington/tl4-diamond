@@ -21,3 +21,5 @@ Der @tge ist ein von der @hhla eingesetztes Tool, das ursprünglich auf dem Open
 Die ursprüngliche Version von @jump, wie sie die @hhla einsetzt, ist heute nicht mehr in dieser Form verfügbar. Stattdessen existiert das Projekt inzwischen als Open‑JUMP, eine weiterentwickelte und offene Variante, die von einer Community gepflegt wird und funktional deutlich über den Stand der alten Vividsolutions‑Version hinausgeht. @JUMPGIS
 
 Der @hhla @tge basiert auf der @jdk Version 8 aus dem Jahr 2014. 2017 führte die @hhla ein Update von der zuvor eingesetzten @jdk version  auf die @jdk 8 durch, um Kompatibilität, Stabilität und langfristige Wartbarkeit sicherzustellen. @Editor_Wiki
+
+= Aufgabenbeschreibung

@@ -2,6 +2,7 @@ public Collection<Geometry> getSelectedItems(Layer layer) {
 
 	ArrayList<Geometry> selectedItems = new ArrayList<>();
 
+	Map<Feature, ?> map = getFeatureToSelectedItemIndexCollectionMap(layer);
 	List<Feature> features = new ArrayList<>(map.keySet()); // snapshot der von anderen Threads nicht verändert werden kann, da Lokal
 		
 	for (Feature feature : features) {

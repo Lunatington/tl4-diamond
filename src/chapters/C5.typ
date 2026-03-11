@@ -53,10 +53,11 @@ Um dieses Problem zu beheben, wurde zu Beginn der Methode ein Snapshot der KeySe
 erstellt, indem die Schlüssel in eine neue lokale ArrayList kopiert werden. Da diese Liste lokal
 ist und nicht von anderen Threads referenziert wird, kann sie während der Iteration nicht verändert
 werden, wodurch die ```"ConcurrentModificationException"``` zuverlässig verhindert wird.
-
 ```Java
 public Collection<Geometry> getSelectedItems(Layer layer) {
   ArrayList<Geometry> selectedItems = new ArrayList<>();
+
+  Map<Feature, ?> map = getFeatureToSelectedItemIndexCollectionMap(layer);
   List<Feature> features = new ArrayList<>(map.keySet()); // snapshot der von anderen Threads nicht verändert werden kann, da Lokal
     
   for (Feature feature : features) {
@@ -67,11 +68,15 @@ public Collection<Geometry> getSelectedItems(Layer layer) {
 }
 ```
 
-Konkret wird mit ```"new ArrayList<>(map.keySet())"``` eine Kopie aller Schlüssel der Map zum
-Zeitpunkt des Methodenaufrufs erstellt. Da diese Liste ausschließlich lokal existiert, haben etwaige
+Zunächst wird über ```"getFeatureToSelectedItemIndexCollectionMap(layer)"``` die interne Map
+abgerufen, die jedem Feature die zugehörigen Selektionsindizes zuordnet. Diese Map ist Teil des
+Zustands der ```"AbstractSelection"```-Klasse und kann durch andere Prozesse – insbesondere
+durch den ```"Event-Dispatch-Thread"``` – jederzeit verändert werden. Genau auf dieser Map wird
+anschließend mit ```"new ArrayList<>(map.keySet())"``` eine Kopie aller Schlüssel zum Zeitpunkt
+des Methodenaufrufs erstellt. Da diese Liste ausschließlich lokal existiert, haben etwaige
 Änderungen an der ursprünglichen Map durch andere Prozesse keinen Einfluss mehr auf die laufende
 Iteration. Dieser Ansatz ist leichtgewichtig und erfordert keine weitreichenden Änderungen an der
-bestehenden Codebasis. 
+bestehenden Codebasis.
 @selectitemsafter @goetz2006jcip @oracle_arraylist
 
 Neben dem gewählten Snapshot-Ansatz wurden auch alternative Lösungsmöglichkeiten in Betracht
