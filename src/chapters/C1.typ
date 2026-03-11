@@ -14,13 +14,13 @@ umfasst, darunter den Umschlag von Massengütern, Fruchtlogistik sowie container
 
 = Programmvorstellung
 
-Der @tge ist ein von der @hhla eingesetztes Tool, das ursprünglich auf dem Open-Source-Framework @jump von Vividsolutions aus dem Jahre 2002 basiert. @JUMPGIS @Editor_Wiki
+Das @jump ist ein Open-Source-Framework von Vividsolutions aus dem Jahre 2002. Die @jump-Workbench stellt prinzipiell die Möglichkeiten zum Anlegen von Vermessungsdaten in verschiedenen Layern zur Verfügung, enthält jedoch von sich aus keinen @tge. @JUMPGIS
 
-2007 entwickelte die @hhla ein eigenes Plugin für @jump, welches speziell auf die Anforderungen des Unternehmens zugeschnitten wurde. Dieses Plugin erweitert den Funktionsumfang des @tge erheblich: Es ermöglicht unter anderem die detaillierte Darstellung von Terminals sowie den Export in verschiedene, für ein @tos notwendige, proprietäre Formate. Darüber hinaus wurde der zugrunde liegende Quellcode umfassend an die internen @hhla‑Prozesse und technischen Vorgaben angepasst. @Editor_Wiki
+2007 entwickelte die @hhla ein eigenes Plugin für @jump, das den Bezeichnung @tge trägt und speziell auf die Anforderungen des Unternehmens zugeschnitten ist. HHLA-spezifisch sind dabei die konkreten Layer, in denen Terminalgeometrien verwaltet werden, die zusätzlichen UseCases und Dialoge zur Bearbeitung dieser Daten sowie die auf den Layer-Elementen auszuführenden Prüfungen. Darüber hinaus ermöglicht das Plugin den Export in verschiedene, für ein @tos notwendige, proprietäre Formate, und der zugrunde liegende Quellcode wurde umfassend an die internen @hhla‑Prozesse und technischen Vorgaben angepasst. @Editor_Wiki
 
-Die ursprüngliche Version von @jump, wie sie die @hhla einsetzt, ist heute nicht mehr in dieser Form verfügbar. Stattdessen existiert das Projekt inzwischen als Open‑JUMP, eine weiterentwickelte und offene Variante, die von einer Community gepflegt wird und funktional deutlich über den Stand der alten Vividsolutions‑Version hinausgeht. @JUMPGIS
+Die ursprüngliche Version von @jump, auf der das @hhla-Plugin aufbaut, ist heute nicht mehr in dieser Form verfügbar. Stattdessen existiert das Projekt inzwischen als Open‑JUMP, eine weiterentwickelte und offene Variante, die von einer Community gepflegt wird und funktional deutlich über den Stand der alten Vividsolutions‑Version hinausgeht. @JUMPGIS
 
-Der @hhla @tge basiert auf der @jdk Version 8 aus dem Jahr 2014. 2017 führte die @hhla ein Update von der zuvor eingesetzten @jdk version  auf die @jdk 8 durch, um Kompatibilität, Stabilität und langfristige Wartbarkeit sicherzustellen. @Editor_Wiki
+Der @hhla @tge basiert auf der @jdk Version 8 aus dem Jahr 2014. 2017 führte die @hhla ein Update von der zuvor eingesetzten @jdk Version auf die @jdk 8 durch, um Kompatibilität, Stabilität und langfristige Wartbarkeit sicherzustellen. @Editor_Wiki
 
 = Aufgabenbeschreibung
 
