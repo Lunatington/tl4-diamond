@@ -23,3 +23,7 @@ Die ursprüngliche Version von @jump, wie sie die @hhla einsetzt, ist heute nich
 Der @hhla @tge basiert auf der @jdk Version 8 aus dem Jahr 2014. 2017 führte die @hhla ein Update von der zuvor eingesetzten @jdk version  auf die @jdk 8 durch, um Kompatibilität, Stabilität und langfristige Wartbarkeit sicherzustellen. @Editor_Wiki
 
 = Aufgabenbeschreibung
+
+Im Rahmen des Praxiseinsatzes bei der @hhla bestand die Aufgabe darin, eine im @tge auftretende ```"ConcurrentModificationException"``` zu analysieren und zu beheben. Der Fehler trat reproduzierbar auf, wenn ein N4-Knotenpunkt mit mehr als 79 angehängten N4-Kanten im @tge verschoben wurde. Als Folge wurden der Knotenpunkt sowie die zugehörigen Kanten mehrfach in der Benutzeroberfläche dargestellt, was die weitere Bearbeitung der Terminalgeometrie verhinderte.
+
+Ziel der Arbeit war es, den Fehler zunächst systematisch zu reproduzieren und einzugrenzen, anschließend die Ursache mithilfe geeigneter Debugging-Methoden zu lokalisieren und schließlich eine robuste Lösung zu entwickeln, die das Fehlverhalten dauerhaft behebt. Der Debugging-Prozess umfasste dabei die Analyse des Error-Logs, die Untersuchung des betroffenen UseCases, das Schreiben von JUnit-Tests zur Isolation des Fehlers sowie den gezielten Einsatz eines Debuggers zur Laufzeitanalyse.
