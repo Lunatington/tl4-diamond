@@ -4,13 +4,13 @@ Um den Fehler systematisch zu analysieren und zu beheben, wurde ein schrittweise
 
 == Beschreibung Fehler 
 
-Wenn ein N4-Knotenpunkt, an welchem mehr als 79 Kanten hängen, bewegt wird, tritt eine
+Wenn ein N4-Knotenpunkt, an welchem mehr als 79 Kanten hängen, bewegt wird (Änderung der X-Y-Koordinate), tritt eine
 ```"ConcurrentModificationException"``` auf.
 
 Die N4-Knotenpunkte und N4-Kanten sind eine @hhla‑spezifische  Erweiterung des ursprünglichen
-Frameworks, die für das @tos N4 benötigt wird. Ein N4-Knotenpunkt repräsentiert dabei eine Position im Fahrwegenetz des Terminals – beispielsweise eine Kreuzung, einen Wendepunkt oder einen Ein-/Ausfahrtspunkt –, während die N4-Kanten die Verbindungsstrecken zwischen diesen Punkten darstellen. Gemeinsam bilden sie ein gerichtetes Wegenetz, das die Grundlage für die automatische Routenplanung der Fahrzeuge auf dem Terminalgelände bildet. Der @tge exportiert dieses Wegenetz als sogenannte ```"Yard-File"```, welche von N4-XPS direkt eingelesen werden kann. @ImportCompiledYardFile
+Frameworks, die für das @tos N4 benötigt wird. Ein N4-Knotenpunkt repräsentiert dabei eine Position im Fahrwegenetz des Terminals – beispielsweise eine Kreuzung, einen Wendepunkt oder einen Ein-/Ausfahrtspunkt –, während die N4-Kanten die Verbindungsstrecken zwischen diesen Punkten darstellen. Gemeinsam bilden sie ein gerichtetes Wegenetz, das die Grundlage für die automatische Routenplanung der Fahrzeuge auf dem Terminalgelände bildet. Der @tge exportiert dieses Wegenetz als teil des sogenannten ```"Yard-File"```, welche von N4-XPS direkt eingelesen werden kann. @ImportCompiledYardFile
 
-Diese Daten sind notwendig, damit N4-XPS – das unter anderem für die automatische Routenplanung der @vc verantwortlich ist – sicherstellen kann, dass geplante Fahrwege den
+Diese Daten sind notwendig, damit N4-XPS – das unter anderem für die automatische Routenplanung der @vc mit der Software N4/XPS verantwortlich ist – sicherstellen kann, dass geplante Fahrwege den
 jeweiligen Verkehrsregeln entsprechen (Einbahnstraßen, Durchgängigkeit, Fahrtrichtung usw.). @Editor_Wiki_TerminalGeometrie @Editor_Wiki_N4-xps @Wiki_N4-xps
 
 Der Fehler tritt ausschließlich bei N4-Kanten und N4-Knotenpunkten auf, nicht jedoch bei den
