@@ -20,10 +20,10 @@ Das @jump ist ein Open-Source-Framework von Vividsolutions aus dem Jahre 2002. D
 
 Die ursprüngliche Version von @jump, auf der das @hhla‑Plugin aufbaut, ist heute nicht mehr in dieser Form verfügbar. Stattdessen existiert das Projekt inzwischen als Open‑JUMP, eine weiterentwickelte und offene Variante, die von einer Community gepflegt wird und funktional deutlich über den Stand der alten Vividsolutions‑Version hinausgeht. @JUMPGIS
 
-Der @hhla @tge basiert auf der @jdk Version 8 aus dem Jahr 2014. 2017 führte die @hhla ein Update von der zuvor eingesetzten @jdk Version auf die @jdk 8 durch, um Kompatibilität, Stabilität und langfristige Wartbarkeit sicherzustellen. @Editor_Wiki
+Der @hhla @tge basiert auf der @jdk Version 8 aus dem Jahr 2014. 2017 führte die @hhla ein Update von der zuvor eingesetzten @jdk Version auf die @jdk 8 durch, um Kompatibilität, Stabilität und langfristige Wartbarkeit sicherzustellen. @Editor_Wiki 
 
 = Aufgabenbeschreibung
 
-Im Rahmen des Praxiseinsatzes bei der @hhla bestand die Aufgabe darin, eine im @tge auftretende ```"ConcurrentModificationException"``` zu analysieren und zu beheben. Der Fehler trat reproduzierbar auf, wenn ein N4-Knotenpunkt mit mehr als 79 angehängten N4-Kanten im @tge verschoben wurde. Als Folge wurden der Knotenpunkt sowie die zugehörigen Kanten mehrfach in der Benutzeroberfläche dargestellt, was die weitere Bearbeitung der Terminalgeometrie verhinderte.
+Im Rahmen des Praxiseinsatzes bei der @hhla bestand die Aufgabe darin, eine im Plugin @tge auftretende ```"ConcurrentModificationException"``` zu analysieren und zu beheben. Der Fehler trat reproduzierbar auf, wenn ein N4-Knotenpunkt mit mehr als 79 angehängten N4-Kanten im @tge verschoben wurde. Als Folge wurden der Knotenpunkt sowie die zugehörigen Kanten mehrfach in der Benutzeroberfläche dargestellt, was die weitere Bearbeitung der Terminalgeometrie verhinderte.
 
 Ziel der Arbeit war es, den Fehler zunächst systematisch zu reproduzieren und einzugrenzen, anschließend die Ursache mithilfe geeigneter Debugging-Methoden zu lokalisieren und schließlich eine robuste Lösung zu entwickeln, die das Fehlverhalten dauerhaft behebt. 
