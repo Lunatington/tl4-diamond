@@ -12,7 +12,7 @@ Am Container Terminal Altenwerder (CTA) der HHLA sind Zweikatz-Containerbrücken
 
 #figure(
   image("../res/CTA-Bruecke.jpg", height: 9cm),
-  caption: "STS-Kran am CTA",
+  caption: "Zweikatz STS-Kran am CTA",
 ) <korea-image>
 
 == CMS (Crane Management System)

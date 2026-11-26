@@ -7,7 +7,7 @@
 	"13445",
 	"Optimierung der Installation eines CMS (Crane Management System) am HHLA-CTA",
 	"Technische Informatik, T23a",
-	//appendix_content: include "chapters/99_appendix.typ",
+	appendix_content: include "chapters/99_appendix.typ",
 	sperrvermerk_text: [
     Die vorliegende Hausarbeit mit dem Titel *```„Optimierung der Installation eines CMS (Crane Management System) am HHLA-CTA"```* enthält vertrauliche Informationen des Unternehmens *```"Hamburger Hafen und Logistik AG"```* und ist ausschließlich zur Einsicht durch die prüfenden Personen der Nordakademie bestimmt.
 
