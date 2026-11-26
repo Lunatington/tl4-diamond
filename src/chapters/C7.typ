@@ -1,7 +1,0 @@
-= Fazit / Bewertung
-
-Die vorliegende Arbeit dokumentiert die systematische Analyse und Behebung einer ConcurrentModificationException im Terminal-Geometrie-Editor der HHLA. Der Fehler trat beim Verschieben von N4-Knotenpunkten mit mehr als 79 angehängten Kanten auf und lag nicht – wie zunächst vermutet – in der Geschäftslogik des HHLA-Plugins, sondern in der UI-Schicht des zugrunde liegenden JUMP-Frameworks. In der Methode getSelectedItems() der Klasse AbstractSelection wurde über eine TreeMap iteriert, während diese gleichzeitig durch UI-Events strukturell verändert wurde.
-
-Der Debugging-Prozess umfasste die Fehlerreproduktion, eine Error-Log-Analyse, das Schreiben eines JUnit-Tests sowie den Einsatz eines Debuggers. Dabei zeigte sich, dass JUnit-Tests allein nicht ausreichen, um UI-bezogene Concurrency-Probleme zu reproduzieren, da sie die Event-Verarbeitung des Frameworks nicht simulieren. Behoben wurde das Problem durch einen lokalen Snapshot der Map-Schlüssel vor der Iteration – ein leichtgewichtiger Ansatz, der keine tiefgreifenden Änderungen am JUMP-Quellcode erfordert. Zusätzlich wurde ein nach dem Fix sichtbar gewordenes Darstellungsproblem durch einen expliziten Repaint über SwingUtilities.invokeLater() gelöst.
-
-Der Fall verdeutlicht, dass bei der Arbeit mit älteren Frameworks, deren Quellcode nicht vollständig unter eigener Kontrolle steht, ein defensiver Programmierstil – etwa durch das Erstellen lokaler Kopien vor Iterationen – die Robustheit des Gesamtsystems erheblich steigern kann.

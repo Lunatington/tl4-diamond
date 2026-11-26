@@ -7,9 +7,9 @@
 	"13445",
 	"Optimierung der Installation eines CMS (Crane Management System) am HHLA-CTA",
 	"Technische Informatik, T23a",
-	appendix_content: include "chapters/99_appendix.typ",
+	//appendix_content: include "chapters/99_appendix.typ",
 	sperrvermerk_text: [
-    Die vorliegende Hausarbeit mit dem Titel *```„Optimierung der Installation eines CMS (Crane Management System) am HHLA-CTAa"```* enthält vertrauliche Informationen des Unternehmens *```"Hamburger Hafen und Logistik AG"```* und ist ausschließlich zur Einsicht durch die prüfenden Personen der Nordakademie bestimmt.
+    Die vorliegende Hausarbeit mit dem Titel *```„Optimierung der Installation eines CMS (Crane Management System) am HHLA-CTA"```* enthält vertrauliche Informationen des Unternehmens *```"Hamburger Hafen und Logistik AG"```* und ist ausschließlich zur Einsicht durch die prüfenden Personen der Nordakademie bestimmt.
 
 		Eine Veröffentlichung, Vervielfältigung oder Weitergabe der Arbeit – auch in Auszügen – ist ohne ausdrückliche schriftliche Genehmigung des Unternehmens sowie der Autorin untersagt.
 
@@ -23,13 +23,15 @@
 )
 
 // --- Include content here ---
-#include "chapters/C1.typ"
-#include "chapters/C2.typ"
-#include "chapters/C3.typ"
-#include "chapters/C4.typ"
-#include "chapters/C5.typ"
-#include "chapters/C6.typ"
-#include "chapters/C7.typ"
+#include "chapters/01_Unternehmensvorstellung.typ"
+#include "chapters/02_Definitionen.typ"
+#include "chapters/03_Problemvorstellung.typ"
+//#include "chapters/C2.typ"
+//#include "chapters/C3.typ"
+//#include "chapters/C4.typ"
+//#include "chapters/C5.typ"
+//#include "chapters/C6.typ"
+//#include "chapters/C7.typ"
 //#include "chapters/01_chapter.typ"
 //#include "chapters/02_chapter.typ"
 //#include "chapters/03_chapter.typ"

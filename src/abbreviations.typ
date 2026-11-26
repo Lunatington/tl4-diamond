@@ -4,34 +4,24 @@
 
 #let abbreviation_list = (
   (
-    key: "tge",
-    short: "GeoEditor",
-    long: "Terminal-Geometrie-Editor",
+    key: "cms",
+    short: "CMS",
+    long: "Crane Management System",
+  ),
+  (
+    key: "sts",
+    short: "STS-Kran",
+    long: "Ship-to-Shore Crane",
+  ),
+  (
+    key: "sts-m",
+    short: "STS-Krane",
+    long: "Ship-to-Shore Crane",
   ),
   (
     key: "hhla",
     short: "HHLA",
     long: "Hamburger Hafen und Logistik AG",
-  ),
-  (
-    key: "jump",
-    short: "JUMP",
-    long: "Java Unified Mapping Program",
-  ),
-  (
-    key: "tos",
-    short: "TOS",
-    long: "Terminal Operating System",
-  ),
-  (
-    key: "jdk",
-    short: "JDK",
-    long: "Java Development Kit",
-  ),
-  (
-    key: "vc",
-    short: "VC",
-    long: "Van-Carrier",
   ),
   (
     key: "ctt",
