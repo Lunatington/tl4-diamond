@@ -3,13 +3,13 @@
 
 #show: transfer_paper.with(
 	language: "de",
-  "2",
+  "3",
 	"13445",
-	"Analyse und Lösung einer ConcurrentModificationException im Terminal Geometrieeditor im Rahmen eines Debugging-Prozesses, in Java",
+	"Optimierung der Installation eines CMS (Crane Management System) am HHLA-CTA",
 	"Technische Informatik, T23a",
 	appendix_content: include "chapters/99_appendix.typ",
 	sperrvermerk_text: [
-    Die vorliegende Hausarbeit mit dem Titel *```„Analyse und Lösung einer ConcurrentModificationException im Terminal Geometrieeditor im Rahmen eines Debugging-Prozesses, in Java"```* enthält vertrauliche Informationen des Unternehmens *```"Hamburger Hafen und Logistik AG"```* und ist ausschließlich zur Einsicht durch die prüfenden Personen der Nordakademie bestimmt.
+    Die vorliegende Hausarbeit mit dem Titel *```„Optimierung der Installation eines CMS (Crane Management System) am HHLA-CTAa"```* enthält vertrauliche Informationen des Unternehmens *```"Hamburger Hafen und Logistik AG"```* und ist ausschließlich zur Einsicht durch die prüfenden Personen der Nordakademie bestimmt.
 
 		Eine Veröffentlichung, Vervielfältigung oder Weitergabe der Arbeit – auch in Auszügen – ist ohne ausdrückliche schriftliche Genehmigung des Unternehmens sowie der Autorin untersagt.
 
@@ -17,7 +17,7 @@
 
 		Diese Arbeit wird ausschließlich zu Prüfungszwecken vorgelegt. Nach Abschluss des Prüfungsverfahrens ist die Arbeit vertraulich zu behandeln und nicht zugänglich zu machen.
 
-		Hamburg, ```10.03.2026```
+		Hamburg, ```01.12.2026```
 
   ],
 )
