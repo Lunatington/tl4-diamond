@@ -1,0 +1,10 @@
+#import "../components/formatting.typ": clickable_link, needsCite, todo, needsSpelling
+= DiaMon3D Einführung
+
+DiaMon3D besteht aus drei zentralen Komponenten: dem Remote Crane Management System (RCMS), den Local Crane Management Systemen (LCMS) sowie den Remote Clients. Das RCMS bildet die zentrale Instanz des Systems und wird als virtuelle Maschine auf dem CTA-eigenen Hyperconverged Cluster, dem ``` VTNS-50006-p / 10.22.34.15``` betrieben. Auf diesem Server laufen die Daten aller STS-Kräne zusammen; gleichzeitig beherbergt er die zentrale Datenbank des Systems. Das RCMS wird durch den HHLA-IT-Betrieb verwaltet und stellt den zentralen Kommunikationspunkt der Anwendung dar. [@DiaMon3D-Wiki]
+
+Auf jeder Containerbrücke sowie auf den ROS-Arbeitsplätzen befindet sich zusätzlich eine lokale LCMS-Installation. Diese Systeme verfügen jeweils über eine eigene lokale Datenbank und werden auf von Liebherr bereitgestellter Hardware betrieben. Die einzelnen Datenbanken werden regelmäßig miteinander synchronisiert, wodurch sowohl ein lokaler als auch ein zentral aggregierter Datenbestand zur Verfügung steht. [@DiaMon3D-Wiki]
+
+Die dritte Komponente bilden die Remote Clients. Hierbei handelt es sich um DiaMon3D-Installationen auf Standard-Arbeitsplätzen der HHLA. Diese Clients dienen ausschließlich der Überwachung und Analyse der Anlagenzustände und greifen auf die durch RCMS beziehungsweise LCMS bereitgestellten Informationen zu. Im Gegensatz zu den LCMS-Systemen besitzen sie keine eigene betriebsrelevante Funktion für die Steuerung der Containerbrücken. [@DiaMon3D-Wiki]
+
+Die technische Kommunikation innerhalb des Systems erfolgt über eine Microsoft SQL Server Express Datenbank. Während die LCMS- und RCMS-Systeme die eigentlichen Betriebs- und Diagnosedaten verwalten, erfolgt die Kommunikation für Steuerungseingriffe über den jeweiligen CMS-PC der Containerbrücke und anschließend über OPC-Schnittstellen zur speicherprogrammierbaren Steuerung (SPS) der Anlage. Die in dieser Arbeit betrachteten Remote Clients greifen ausschließlich lesend auf die bereitgestellten Informationen zu. [@DiaMon3D-Wiki]

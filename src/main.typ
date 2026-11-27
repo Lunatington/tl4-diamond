@@ -26,6 +26,7 @@
 #include "chapters/01_Unternehmensvorstellung.typ"
 #include "chapters/02_Definitionen.typ"
 #include "chapters/03_Problemvorstellung.typ"
+#include "chapters/03.5_Diamond_Input.typ"
 #include "chapters/04_Moeglichkeiten.typ"
 //#include "chapters/C2.typ"
 //#include "chapters/C3.typ"
